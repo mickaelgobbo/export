@@ -3,8 +3,11 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import org.testng.annotations.Test;
+
 
 public class createFile {
+	 @Test
 	  public static void main(String[] args) throws IOException {
 	        String text = "Hello world";
 	        BufferedWriter output = null;
