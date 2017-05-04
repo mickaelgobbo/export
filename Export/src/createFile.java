@@ -9,9 +9,18 @@ public class createFile {
 	        String text = "Hello world";
 	        BufferedWriter output = null;
 	        try {
-	            File file = new File("output/example.txt");
+	            File file = new File("output/customer.txt");
 	            output = new BufferedWriter(new FileWriter(file));
-	            output.write(text);
+	            output.write("ID,Last name,First Name,Email");
+	            output.write("\r\n");
+	            for (int i=0;i<200;i++)
+	            {
+		        output.write(i+ ","); 
+		        output.write("Last name" + i + ",");
+		        output.write("First name" + i + ",");
+		        output.write("Email" + i + ","); 
+	            output.write("\r\n");
+	            }
 	        } catch ( IOException e ) {
 	            e.printStackTrace();
 	        } finally {
